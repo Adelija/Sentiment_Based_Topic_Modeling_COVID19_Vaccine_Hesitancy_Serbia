@@ -14,11 +14,8 @@ Configure Twarc with your Twitter API tokens (note you must apply for a Twitter 
     twarc configure
 Run the script. The hydrated Tweets will be stored in the same folder as the Tweet-ID file, and is saved as a compressed jsonl file
 
-    python3 hydrate.py -streaming
-for hydrating the streaming collection or
+    twarc2 hydrate ids.txt tweets.jsonl
 
-    python3 hydrate.py -account
-for hydrating the account collection
 
 ### Hydrating using Tweepy:
     import tweepy
