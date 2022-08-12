@@ -10,7 +10,7 @@ First install Twarc and tqdm
 
 Configure Twarc with your Twitter API tokens (note you must apply for a Twitter developer account first in order to obtain the needed tokens). You can also configure the API tokens in the script, if unable to configure through CLI.
 
-    twarc configure
+    twarc2 configure
 Run the script. The hydrated Tweets will be stored in the same folder as the Tweet-ID file, and is saved as a compressed jsonl file
 
     twarc2 hydrate ids.txt tweets.jsonl
