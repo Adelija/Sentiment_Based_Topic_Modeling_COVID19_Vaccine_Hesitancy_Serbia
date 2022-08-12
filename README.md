@@ -2,7 +2,6 @@
 The repository contains tweet collections associated with vaccine hesitancy on Twitter. Tweet were collected by leveraging Twitter search API filtered using keywords.
 ## How to Hydrate
 ### Hydrating using Twarc (CLI)
-Many thanks to Ed Summers (edsu) for writing this script that uses Twarc to hydrate all Tweet-IDs stored in their corresponding folders.
 
 First install Twarc and tqdm
 
