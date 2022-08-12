@@ -1,5 +1,5 @@
 # Covid19-hesitance-tweets
-The repository contains tweet collections associated with vaccine hesitancy on Twitter. Tweet were collected by leveraging Twitter search API filtered using keywords in Serbian language. 
+The repository contains tweet collections associated with vaccine hesitancy on Twitter. Tweet were collected by leveraging Twitter search API filtered using keywords in Serbian language. The collection is combination of manually annotated negative tweets and automatically annotated negative tweets - 3286 in total.
 ## How to Hydrate
 ### Hydrating using Twarc (CLI)
 
