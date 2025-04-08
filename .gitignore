@@ -1,0 +1,17 @@
+
+__pycache__/
+*.pyc
+data/raw/
+models/checkpoints/
+*.log
+.env
+
+# Exclude specific file
+TopicModeling/documents_in_topics.py
+TopicModeling/datasets/
+
+# Exclude folder
+logs/
+
+# Exclude all `.log` files
+*.log
