@@ -4,7 +4,6 @@ Created on Tue Jul 12 12:06:12 2022
 
 @author: adela
 """
-# PREUZETO SA https://stackoverflow.com/questions/32313062/what-is-the-best-way-to-obtain-the-optimal-number-of-topics-for-a-lda-model-usin
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
