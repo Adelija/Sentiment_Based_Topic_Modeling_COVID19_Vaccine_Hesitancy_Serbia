@@ -33,36 +33,78 @@ The approach consists of the following steps:
 
 ## Repository Structure
 
-- `data/`: Contains datasets used for training and evaluation.
-- `notebooks/`: Jupyter notebooks demonstrating data processing and modeling steps.
-- `models/`: Trained models for relevance and sentiment classification.
-- `src/`: Source code for data preprocessing, model training, and evaluation.
+- `SentimentAnalysis/`: Scripts for preprocessing, training, and evaluating relevance and sentiment classifiers.
+- `TopicModeling/`: Scripts and notebooks for coherence evaluation and topic modeling using LDA/NMF.
+- `ids_tweet/`: Tweet IDs related to vaccine hesitancy, used for hydration.
 - `README.md`: Project overview and instructions.
 
+## How to Hydrate Tweets
 
-
-
-
-# COVID-19-vaccine-hesitancy-tweets
-The repository contains a collection of tweets associated with vaccine hesitancy on Serbian Twitter. Tweet were collected by leveraging the Twitter search API filtered using keywords in Serbian. The collection is a combination of manually annotated negative tweets and automatically annotated negative tweets - 3286 in total. In line with Twitter's Terms of service, we provide only tweet IDs.
-## How to Hydrate
 ### Hydrating using Twarc (CLI)
 
-First install Twarc and tqdm
+First install Twarc and tqdm:
 
-    pip3 install twarc
-    pip3 install tqdm
+```bash
+pip3 install twarc
+pip3 install tqdm
+```
 
-Configure Twarc with your Twitter API tokens (note you must apply for a Twitter developer account first in order to obtain the needed tokens). You can also configure the API tokens in the script, if unable to configure through CLI.
+Configure Twarc with your Twitter API tokens (you must apply for a Twitter developer account first):
 
-    twarc2 configure
-Run the script. The hydrated Tweets will be stored in the same folder as the Tweet-ID file, and is saved as a compressed jsonl file
+```bash
+twarc2 configure
+```
 
-    twarc2 hydrate ids.txt tweets.jsonl
+Run the script. The hydrated Tweets will be stored in the same folder as the Tweet-ID file, saved as a compressed JSONL file:
 
+```bash
+twarc2 hydrate ids.txt tweets.jsonl
+```
 
-### Hydrating using Tweepy:
-    import tweepy
-    auth = tweepy.AppAuthHandler(consumer_key, consumer_secret)
-    api = tweepy.API(auth, retry_count=5, retry_delay=2, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
-    api.statuses_lookup(list_of_ids) #consider the limitations in tweepy documentation
+### Hydrating using Tweepy (Python)
+
+```python
+import tweepy
+
+auth = tweepy.AppAuthHandler(consumer_key, consumer_secret)
+api = tweepy.API(auth, retry_count=5, retry_delay=2, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
+api.statuses_lookup(list_of_ids)  # Consider limitations in Tweepy documentation
+```
+
+## Results
+
+- **Classifier Performance**:
+  - Relevance Classifier F-scores: 0.91 (relevant), 0.96 (irrelevant).
+  - Sentiment Classifier F-scores: 0.87 (negative), 0.85 (neutral), 0.85 (positive).
+
+- **Identified Reasons for Vaccine Hesitancy**:
+  1. Concerns over vaccine side effects.
+  2. Doubts about vaccine effectiveness.
+  3. Perception of insufficient testing.
+  4. Mistrust in authorities.
+  5. Belief in conspiracy theories.
+
+## Getting Started
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/vaccine-hesitancy-serbia.git
+   cd vaccine-hesitancy-serbia
+   ```
+
+2. **Set up the environment**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
+3. **Run the analysis**:
+   - Use the notebooks in the appropriate folders to follow the data processing and modeling steps.
+
+## Citation
+
+If you use this work, please cite the original paper:
+
+> Ljajić A, Prodanović N, Medvecki D, Bašaragin B, Mitrović J. Uncovering the Reasons Behind COVID-19 Vaccine Hesitancy in Serbia: Sentiment-Based Topic Modeling. J Med Internet Res. 2022 Nov 17;24(11):e42261. doi: 10.2196/42261.
+
