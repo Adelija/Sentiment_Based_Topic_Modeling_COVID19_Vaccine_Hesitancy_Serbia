@@ -75,7 +75,7 @@ api.statuses_lookup(list_of_ids)  # Consider limitations in Tweepy documentation
 
 1. **Clone the repository**:
    ```bash
-   git clone **https://github.com/yourusername/vaccine-hesitancy-serbia.git**
+   git clone https://github.com/yourusername/vaccine-hesitancy-serbia.git
    ```
 
 2. **Run the analysis**:
