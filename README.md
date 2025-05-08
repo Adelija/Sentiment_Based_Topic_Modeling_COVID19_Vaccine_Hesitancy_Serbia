@@ -75,18 +75,10 @@ api.statuses_lookup(list_of_ids)  # Consider limitations in Tweepy documentation
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/yourusername/vaccine-hesitancy-serbia.git
-   cd vaccine-hesitancy-serbia
+   git clone https://github.com/yourusername/vaccine-hesitancy-serbia.git](https://github.com/Adelija/Sentiment_Based_Topic_Modeling_COVID19_Vaccine_Hesitancy_Serbia
    ```
 
-2. **Set up the environment**:
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
-
-3. **Run the analysis**:
+2. **Run the analysis**:
    - Use the notebooks in the appropriate folders to follow the data processing and modeling steps.
 
 ## Citation
