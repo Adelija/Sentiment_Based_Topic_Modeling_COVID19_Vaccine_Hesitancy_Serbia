@@ -18,19 +18,6 @@ The approach consists of the following steps:
 4. **Topic Modeling**:
    - Applied Latent Dirichlet Allocation (LDA) and Non-negative Matrix Factorization (NMF) on tweets with negative sentiment to uncover main reasons for vaccine hesitancy.
 
-## Results
-
-- **Classifier Performance**:
-  - Relevance Classifier F-scores: 0.91 (relevant), 0.96 (irrelevant).
-  - Sentiment Classifier F-scores: 0.87 (negative), 0.85 (neutral), 0.85 (positive).
-
-- **Identified Reasons for Vaccine Hesitancy**:
-  1. Concerns over vaccine side effects.
-  2. Doubts about vaccine effectiveness.
-  3. Perception of insufficient testing.
-  4. Mistrust in authorities.
-  5. Belief in conspiracy theories.
-
 ## Repository Structure
 
 - `SentimentAnalysis/`: Scripts for preprocessing, training, and evaluating relevance and sentiment classifiers.
@@ -107,4 +94,3 @@ api.statuses_lookup(list_of_ids)  # Consider limitations in Tweepy documentation
 If you use this work, please cite the original paper:
 
 > Ljajić A, Prodanović N, Medvecki D, Bašaragin B, Mitrović J. Uncovering the Reasons Behind COVID-19 Vaccine Hesitancy in Serbia: Sentiment-Based Topic Modeling. J Med Internet Res. 2022 Nov 17;24(11):e42261. doi: 10.2196/42261.
-
